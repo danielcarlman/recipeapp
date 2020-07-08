@@ -1,0 +1,18 @@
+.field {
+  text-align: center;
+  width: 70rem;
+  height: 5rem;
+  margin: 2rem;
+  border-radius: 1rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  color: white;
+}
+
+.field:hover {
+  background-color: rgba(255, 255, 255, 0.45);
+}
+/*# sourceMappingURL=style.css.map */
