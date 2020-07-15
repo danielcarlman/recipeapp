@@ -1,8 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   font-size: 62.5%;
   color: #f0f0f0;
   background-color: #30434f;
@@ -11,8 +10,7 @@ body {
 *,
 *:before,
 *:after {
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 /* Desktop Screens CSS Variables */
@@ -23,6 +21,7 @@ body {
 }
 
 /* Tablet Screens CSS Variables */
+
 @media (max-width: 900px) {
   :root {
     --title-font-size: 3.2rem;
@@ -32,6 +31,7 @@ body {
 }
 
 /* Mobile Screens CSS Variables */
+
 @media (max-width: 600px) {
   :root {
     --title-font-size: 2rem;
@@ -39,4 +39,3 @@ body {
     --input-width: 75vw;
   }
 }
-/*# sourceMappingURL=style.css.map */

@@ -5,7 +5,7 @@ import Input from '../../Components/Input';
 function Screen1() {
   return (
     <div className='screen1-container'>
-      <h2>Insert a title for you recipe :</h2>
+      <h2>What's the name of your recipe?</h2>
       <Input />
     </div>
   );

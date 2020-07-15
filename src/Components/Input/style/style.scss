@@ -1,16 +1,18 @@
 .field {
   text-align: center;
-  width: 70rem;
+  width: var(--input-width);
   height: 5rem;
   margin: 2rem;
-  border-radius: 1rem;
+  border: solid 0.05rem;
+  border-radius: 1.8rem;
   background-color: rgba(255, 255, 255, 0.1);
   transition: 0.3s all;
-
   font-family: 'Montserrat', sans-serif;
   font-size: 2rem;
   color: white;
+  text-shadow: none;
 }
+
 .field:hover {
   background-color: rgba(255, 255, 255, 0.25);
 }
