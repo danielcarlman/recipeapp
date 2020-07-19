@@ -1,10 +1,13 @@
 import React from 'react';
 import style from './style/style.css';
 
-function Field() {
+function Field({ setRecipeTitle }) {
+  function updateValue(event) {
+    setRecipeTitle(event.target.value);
+  }
   return (
     <form>
-      <input maxlength='60' className='field' />
+      <input maxLength='60' className='field' onChange={updateValue} />
     </form>
   );
 }
