@@ -7,20 +7,22 @@ export const Actions = {
   setTitle: (title) => {
     return { type: Types.SET_TITLE, payload: title };
   },
+  addIngredients: (ingredient) => {
+    return { type: Types.SET_INGREDIENTS, payload: ingredient };
+  },
 };
 
 const INITIAL_STATE = {
   title: '',
-  ingredients: [
-    { name: 'rice', quantity: 100, metric: 'grams' },
-    { name: 'egg', quantity: 6, metric: 'unit' },
-  ],
+  ingredients: [],
 };
 
 export default function Recipes(state = INITIAL_STATE, action) {
   switch (action.type) {
     case Types.SET_TITLE:
       return { ...state, title: action.payload };
+    case Types.SET_INGREDIENTS:
+      return { ...state, ingredients: [...state.ingredients, action.payload] };
     default:
       return { ...state };
   }
