@@ -6,10 +6,10 @@ import Input from '../../Components/Input';
 
 function Screen2() {
   const { title, ingredients } = useSelector((state) => state.Recipes);
-  const [recipeTitle, setRecipeTitle] = useState('');
+  const [ingredientTitle, setIngredientTitle] = useState('');
   const dispatch = useDispatch();
   function saveTitle() {
-    dispatch(Actions.setTitle(recipeTitle));
+    dispatch(Actions.addIngredients(ingredientTitle));
   }
 
   // function saveIngredients() {
@@ -22,11 +22,10 @@ function Screen2() {
     <div className='screen2-container'>
       <h2>Add ingredients for you recipe :</h2>
       {/* REDUX STORE */}
-      <h2>{JSON.stringify(title)}</h2>
-      <h2>{JSON.stringify(ingredients)}</h2>
+      <h2>Ingredients: {JSON.stringify(ingredients)}</h2>
       {/* ONCHANGE */}
-      <h2>{JSON.stringify(recipeTitle)}</h2>
-      <Input setRecipeTitle={setRecipeTitle} />
+      <h2>onChange: {JSON.stringify(ingredientTitle)}</h2>
+      <Input setRecipeTitle={setIngredientTitle} />
       <button onClick={saveTitle}>Next</button>
     </div>
   );

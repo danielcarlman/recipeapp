@@ -23,10 +23,9 @@ function Screen1() {
     <div className='screen1-container'>
       <h2>Insert a title for you recipe :</h2>
       {/* REDUX STORE */}
-      <h2>{JSON.stringify(title)}</h2>
-      <h2>{JSON.stringify(ingredients)}</h2>
+      <h2>Title: {JSON.stringify(title)}</h2>
       {/* ONCHANGE */}
-      <h2>{JSON.stringify(recipeTitle)}</h2>
+      <h2>OnChange: {JSON.stringify(recipeTitle)}</h2>
       <Input setRecipeTitle={setRecipeTitle} />
       <Link to='/step2'>
         <button onClick={saveTitle}>Next</button>
