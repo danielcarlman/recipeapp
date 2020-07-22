@@ -1,7 +1,7 @@
 h1 {
   margin: 0;
   font-family: 'Pacifico', cursive;
-  font-size: 5rem;
+  font-size: var(--title-font-size);
 }
 
 h2 {
@@ -18,9 +18,9 @@ h2 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: var(--title-flex-position);
+      -ms-flex-pack: var(--title-flex-position);
+          justify-content: var(--title-flex-position);
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -30,7 +30,7 @@ h2 {
 }
 
 .title {
-  margin: 2rem 0.5rem;
+  margin: 2rem 0.25rem;
   text-shadow: 5px 5px 0px #052939, 10px 10px 0px #46b59b, 15px 15px 0px #017e7f, 20px 20px 0px #052939;
 }
 /*# sourceMappingURL=style.css.map */

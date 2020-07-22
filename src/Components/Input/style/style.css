@@ -1,18 +1,21 @@
 .field {
   text-align: center;
-  width: 70rem;
+  width: var(--input-width);
   height: 5rem;
   margin: 2rem;
   border-radius: 1rem;
+  border: 1px solid;
   background-color: rgba(255, 255, 255, 0.1);
-  -webkit-transition: 0.3s all;
-  transition: 0.3s all;
+  -webkit-transition: 0.1s all;
+  transition: 0.1s all;
   font-family: 'Montserrat', sans-serif;
   font-size: 2rem;
   color: white;
 }
 
 .field:hover {
-  background-color: rgba(255, 255, 255, 0.25);
+  background-color: rgba(255, 255, 255, 0.45);
+  -webkit-box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.05);
 }
 /*# sourceMappingURL=style.css.map */
