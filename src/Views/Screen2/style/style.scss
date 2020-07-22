@@ -1,20 +1,7 @@
-h1 {
-  margin: 0;
-  font-family: 'Pacifico', cursive;
-  font-size: var(--title-font-size);
-  text-align: center;
-}
-
-h2 {
-  margin: 0;
-  font-family: 'Montserrat', sans-serif;
-  font-size: var(--instruction-font-size);
-}
-
 .screen2-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: var(--instruction-flex-position);
   align-items: center;
   background-color: #30434f;
   max-width: 100%;

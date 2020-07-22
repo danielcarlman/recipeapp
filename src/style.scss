@@ -5,6 +5,7 @@ body {
   font-size: 62.5%;
   color: #f0f0f0;
   background-color: #30434f;
+  text-align: center;
 }
 
 *,
@@ -13,11 +14,24 @@ body {
   box-sizing: inherit;
 }
 
+h1 {
+  margin: 0;
+  font-family: 'Pacifico', cursive;
+  font-size: var(--title-font-size);
+}
+
+h2 {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: var(--instruction-font-size);
+}
+
 /* Desktop Screens CSS Variables */
 :root {
   --title-font-size: 5rem;
-  --title-flex-position: flex-end;
+  --title-flex-position: center;
   --instruction-font-size: 3rem;
+  --instruction-flex-position: center;
   --input-width: 75vw;
 }
 
@@ -26,8 +40,9 @@ body {
 @media (max-width: 900px) {
   :root {
     --title-font-size: 3.2rem;
-    --title-flex-position: flex-start;
+    --title-flex-position: center;
     --instruction-font-size: 2.5rem;
+    --instruction-flex-position: center;
     --input-width: 75vw;
   }
 }
@@ -36,9 +51,10 @@ body {
 
 @media (max-width: 600px) {
   :root {
-    --title-font-size: 2rem;
+    --title-font-size: 2.5rem;
     --title-flex-position: center;
     --instruction-font-size: 2rem;
+    --instruction-flex-position: center;
     --input-width: 75vw;
   }
 }

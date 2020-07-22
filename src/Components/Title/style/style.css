@@ -1,15 +1,3 @@
-h1 {
-  margin: 0;
-  font-family: 'Pacifico', cursive;
-  font-size: var(--title-font-size);
-}
-
-h2 {
-  margin: 0;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 2rem;
-}
-
 .container {
   display: -webkit-box;
   display: -ms-flexbox;
