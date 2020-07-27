@@ -20,13 +20,17 @@ function Screen2() {
       <h2>Ingredients: {JSON.stringify(ingredients)}</h2>
       {/* ONCHANGE */}
       <h2>onChange: {JSON.stringify(ingredientTitle)}</h2>
-      <Input setRecipeTitle={setIngredientTitle} />
+
+      <div className='input-container'>
+        <Input setRecipeTitle={setIngredientTitle} />
+        <Link to='/step3'>
+          <button disabled={!ingredients.length || ingredients.includes('')}>
+            Next Page
+          </button>
+        </Link>
+      </div>
+
       <button onClick={saveIngredients}>Add Ingredients</button>
-      <Link to='/step3'>
-        <button disabled={!ingredients.length || ingredients.includes('')}>
-          Next Page
-        </button>
-      </Link>
     </div>
   );
 }

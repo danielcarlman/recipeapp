@@ -63,3 +63,9 @@ a {
   color: #ffffff;
   text-decoration: none;
 }
+
+.input-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
