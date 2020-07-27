@@ -10,7 +10,11 @@ function Screen2() {
   const [ingredientTitle, setIngredientTitle] = useState('');
   const dispatch = useDispatch();
   function saveIngredients() {
-    dispatch(Actions.addIngredients(ingredientTitle));
+    if (!ingredientTitle.length) {
+      return null;
+    } else {
+      dispatch(Actions.addIngredients(ingredientTitle));
+    }
   }
 
   return (
@@ -22,6 +26,9 @@ function Screen2() {
       <h2>onChange: {JSON.stringify(ingredientTitle)}</h2>
 
       <div className='input-container'>
+        <Link to='/'>
+          <button>Previous Page</button>
+        </Link>
         <Input setRecipeTitle={setIngredientTitle} />
         <Link to='/step3'>
           <button disabled={!ingredients.length || ingredients.includes('')}>
@@ -30,7 +37,9 @@ function Screen2() {
         </Link>
       </div>
 
-      <button onClick={saveIngredients}>Add Ingredients</button>
+      <button disabled={!ingredientTitle.length} onClick={saveIngredients}>
+        Add Ingredients
+      </button>
     </div>
   );
 }
