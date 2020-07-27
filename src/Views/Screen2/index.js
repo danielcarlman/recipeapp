@@ -23,7 +23,7 @@ function Screen2() {
       <Input setRecipeTitle={setIngredientTitle} />
       <button onClick={saveIngredients}>Add Ingredients</button>
       <Link to='/step3'>
-        <button disabled={ingredients.length < 1}>Next Page</button>
+        <button disabled={!ingredients.length}>Next Page</button>
       </Link>
     </div>
   );

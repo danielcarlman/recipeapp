@@ -23,7 +23,7 @@ function Screen1() {
       <Input setRecipeTitle={setRecipeTitle} />
       <button onClick={saveTitle}>Change Title</button>
       <Link to='/step2'>
-        <button disabled={title.length < 1}>Next Page</button>
+        <button disabled={!title.length}>Next Page</button>
       </Link>
     </div>
   );
