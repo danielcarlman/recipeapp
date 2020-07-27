@@ -3,6 +3,7 @@ import style from './style/style.css';
 import { Actions } from '../../redux/reducers/Recipes';
 import { useSelector, useDispatch } from 'react-redux';
 import Input from '../../Components/Input';
+import { Link } from 'react-router-dom';
 
 function Screen2() {
   const { ingredients } = useSelector((state) => state.Recipes);
@@ -20,7 +21,10 @@ function Screen2() {
       {/* ONCHANGE */}
       <h2>onChange: {JSON.stringify(ingredientTitle)}</h2>
       <Input setRecipeTitle={setIngredientTitle} />
-      <button onClick={saveIngredients}>Next</button>
+      <button onClick={saveIngredients}>Add Ingredients</button>
+      <Link to='/step3'>
+        <button disabled={ingredients.length < 1}>Next Page</button>
+      </Link>
     </div>
   );
 }

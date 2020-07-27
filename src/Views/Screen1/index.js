@@ -21,10 +21,9 @@ function Screen1() {
       {/* ONCHANGE */}
       <h2>OnChange: {JSON.stringify(recipeTitle)}</h2>
       <Input setRecipeTitle={setRecipeTitle} />
+      <button onClick={saveTitle}>Change Title</button>
       <Link to='/step2'>
-        <button disabled={recipeTitle.length < 1} onClick={saveTitle}>
-          Next
-        </button>
+        <button disabled={recipeTitle.length < 1}>Next Page</button>
       </Link>
     </div>
   );
