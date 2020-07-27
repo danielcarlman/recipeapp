@@ -1,3 +1,34 @@
+/* Desktop Screens CSS Variables */
+:root {
+  --title-font-size: 5rem;
+  --title-flex-position: center;
+  --instruction-font-size: 3rem;
+  --instruction-flex-position: center;
+  --input-width: 75vw;
+}
+
+/* Tablet Screens CSS Variables */
+@media (max-width: 900px) {
+  :root {
+    --title-font-size: 3.2rem;
+    --title-flex-position: center;
+    --instruction-font-size: 2.1rem;
+    --instruction-flex-position: center;
+    --input-width: 75vw;
+  }
+}
+
+/* Mobile Screens CSS Variables */
+@media (max-width: 600px) {
+  :root {
+    --title-font-size: 2.5rem;
+    --title-flex-position: center;
+    --instruction-font-size: 1.5rem;
+    --instruction-flex-position: flex-start;
+    --input-width: 75vw;
+  }
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -28,34 +59,8 @@ h2 {
   font-size: var(--instruction-font-size);
 }
 
-/* Desktop Screens CSS Variables */
-:root {
-  --title-font-size: 5rem;
-  --title-flex-position: center;
-  --instruction-font-size: 3rem;
-  --instruction-flex-position: center;
-  --input-width: 75vw;
-}
-
-/* Tablet Screens CSS Variables */
-@media (max-width: 900px) {
-  :root {
-    --title-font-size: 3.2rem;
-    --title-flex-position: center;
-    --instruction-font-size: 2.1rem;
-    --instruction-flex-position: center;
-    --input-width: 75vw;
-  }
-}
-
-/* Mobile Screens CSS Variables */
-@media (max-width: 600px) {
-  :root {
-    --title-font-size: 2.5rem;
-    --title-flex-position: center;
-    --instruction-font-size: 1.5rem;
-    --instruction-flex-position: flex-start;
-    --input-width: 75vw;
-  }
+a {
+  color: #ffffff;
+  text-decoration: none;
 }
 /*# sourceMappingURL=style.css.map */

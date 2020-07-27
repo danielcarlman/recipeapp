@@ -5,18 +5,12 @@ import { useSelector, useDispatch } from 'react-redux';
 import Input from '../../Components/Input';
 
 function Screen2() {
-  const { title, ingredients } = useSelector((state) => state.Recipes);
+  const { ingredients } = useSelector((state) => state.Recipes);
   const [ingredientTitle, setIngredientTitle] = useState('');
   const dispatch = useDispatch();
-  function saveTitle() {
+  function saveIngredients() {
     dispatch(Actions.addIngredients(ingredientTitle));
   }
-
-  // function saveIngredients() {
-  //   dispatch(
-  //     Actions.addIngredients({ name: 'bean', quantity: 170, metric: 'grams' })
-  //   );
-  // }
 
   return (
     <div className='screen2-container'>
@@ -26,7 +20,7 @@ function Screen2() {
       {/* ONCHANGE */}
       <h2>onChange: {JSON.stringify(ingredientTitle)}</h2>
       <Input setRecipeTitle={setIngredientTitle} />
-      <button onClick={saveTitle}>Next</button>
+      <button onClick={saveIngredients}>Next</button>
     </div>
   );
 }

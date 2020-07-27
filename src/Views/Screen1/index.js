@@ -6,18 +6,12 @@ import Input from '../../Components/Input';
 import { Link } from 'react-router-dom';
 
 function Screen1() {
-  const { title, ingredients } = useSelector((state) => state.Recipes);
+  const { title } = useSelector((state) => state.Recipes);
   const [recipeTitle, setRecipeTitle] = useState('');
   const dispatch = useDispatch();
   function saveTitle() {
     dispatch(Actions.setTitle(recipeTitle));
   }
-
-  // function saveIngredients() {
-  //   dispatch(
-  //     Actions.addIngredients({ name: 'bean', quantity: 170, metric: 'grams' })
-  //   );
-  // }
 
   return (
     <div className='screen1-container'>
@@ -28,7 +22,9 @@ function Screen1() {
       <h2>OnChange: {JSON.stringify(recipeTitle)}</h2>
       <Input setRecipeTitle={setRecipeTitle} />
       <Link to='/step2'>
-        <button onClick={saveTitle}>Next</button>
+        <button disabled={recipeTitle.length < 1} onClick={saveTitle}>
+          Next
+        </button>
       </Link>
     </div>
   );
