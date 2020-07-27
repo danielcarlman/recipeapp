@@ -28,7 +28,9 @@ function Screen1() {
         </Link>
       </div>
 
-      <button onClick={saveTitle}>Change Title</button>
+      <button disabled={!recipeTitle.length} onClick={saveTitle}>
+        Change Title
+      </button>
     </div>
   );
 }
