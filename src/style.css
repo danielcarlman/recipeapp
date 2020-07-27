@@ -76,4 +76,38 @@ a {
       -ms-flex-align: center;
           align-items: center;
 }
+
+.button {
+  -webkit-box-shadow: inset 0px 0px 2.5rem -0.4rem #bbdaf7;
+          box-shadow: inset 0px 0px 2.5rem -0.4rem #bbdaf7;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #79bbff), to(#378de5));
+  background: linear-gradient(to bottom, #79bbff 5%, #378de5 100%);
+  background-color: #79bbff;
+  border-radius: 2.3rem;
+  border: none;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 0.8rem 2.4rem;
+  text-decoration: none;
+  text-shadow: 0 0.3rem 0 #528ecc;
+}
+
+.button:hover:enabled {
+  -webkit-filter: brightness(115%);
+          filter: brightness(115%);
+}
+
+.button:active {
+  position: relative;
+  top: 1px;
+}
+
+.button:disabled {
+  -webkit-filter: brightness(50%);
+          filter: brightness(50%);
+}
 /*# sourceMappingURL=style.css.map */

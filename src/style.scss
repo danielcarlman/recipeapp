@@ -69,3 +69,33 @@ a {
   flex-direction: row;
   align-items: center;
 }
+
+.button {
+  box-shadow: inset 0px 0px 2.5rem -0.4rem #bbdaf7;
+  background: linear-gradient(to bottom, #79bbff 5%, #378de5 100%);
+  background-color: #79bbff;
+  border-radius: 2.3rem;
+  border: none;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 0.8rem 2.4rem;
+  text-decoration: none;
+  text-shadow: 0 0.3rem 0 #528ecc;
+
+  &:hover:enabled {
+    filter: brightness(115%);
+  }
+
+  &:active {
+    position: relative;
+    top: 1px;
+  }
+
+  &:disabled {
+    filter: brightness(50%);
+  }
+}

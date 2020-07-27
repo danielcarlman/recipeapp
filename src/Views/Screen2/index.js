@@ -27,17 +27,27 @@ function Screen2() {
 
       <div className='input-container'>
         <Link to='/'>
-          <button>Previous Page</button>
+          <button className='button' alt='Back'>
+            &lt;
+          </button>
         </Link>
         <Input setRecipeTitle={setIngredientTitle} />
         <Link to='/step3'>
-          <button disabled={!ingredients.length || ingredients.includes('')}>
-            Next Page
+          <button
+            className='button'
+            disabled={!ingredients.length || ingredients.includes('')}
+            alt='Next'
+          >
+            &gt;
           </button>
         </Link>
       </div>
 
-      <button disabled={!ingredientTitle.length} onClick={saveIngredients}>
+      <button
+        className='button'
+        disabled={!ingredientTitle.length}
+        onClick={saveIngredients}
+      >
         Add Ingredients
       </button>
     </div>

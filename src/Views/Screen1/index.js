@@ -24,11 +24,17 @@ function Screen1() {
       <div className='input-container'>
         <Input setRecipeTitle={setRecipeTitle} />
         <Link to='/step2'>
-          <button disabled={!title.length}>Next</button>
+          <button className='button' alt='Next' disabled={!title.length}>
+            &gt;
+          </button>
         </Link>
       </div>
 
-      <button disabled={!recipeTitle.length} onClick={saveTitle}>
+      <button
+        className='button'
+        disabled={!recipeTitle.length}
+        onClick={saveTitle}
+      >
         Change Title
       </button>
     </div>
