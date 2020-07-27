@@ -1,6 +1,6 @@
 export const Types = {
   SET_TITLE: 'Recipes/SET_TITLE',
-  SET_INGREDIENTS: 'Recipes/SET_INGREDIENTS',
+  ADD_INGREDIENTS: 'Recipes/SET_INGREDIENTS',
 };
 
 export const Actions = {
@@ -8,7 +8,7 @@ export const Actions = {
     return { type: Types.SET_TITLE, payload: title };
   },
   addIngredients: (ingredient) => {
-    return { type: Types.SET_INGREDIENTS, payload: ingredient };
+    return { type: Types.ADD_INGREDIENTS, payload: ingredient };
   },
 };
 
@@ -21,7 +21,7 @@ export default function Recipes(state = INITIAL_STATE, action) {
   switch (action.type) {
     case Types.SET_TITLE:
       return { ...state, title: action.payload };
-    case Types.SET_INGREDIENTS:
+    case Types.ADD_INGREDIENTS:
       return { ...state, ingredients: [...state.ingredients, action.payload] };
     default:
       return { ...state };
