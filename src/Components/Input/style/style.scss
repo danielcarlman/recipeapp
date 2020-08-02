@@ -1,8 +1,15 @@
+.input-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: var(--input-width);
+}
+
 .field {
   text-align: center;
   width: var(--input-width);
   height: 5rem;
-  margin: 2rem;
   border-radius: 1rem;
   border: 1px solid;
   background-color: rgba(255, 255, 255, 0.1);
@@ -16,4 +23,16 @@
   background-color: rgba(255, 255, 255, 0.45);
   -webkit-box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.05);
   box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.05);
+}
+
+.title-input {
+  @extend .field;
+}
+
+.ingredient-input {
+  @extend .field;
+  font-size: var(--smallest-font-size);
+  width: var(--ingredient-input-width);
+  height: var(--ingredient-input-height);
+  margin: 1rem 1rem;
 }

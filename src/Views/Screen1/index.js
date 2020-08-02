@@ -25,6 +25,7 @@ function Screen1() {
 
       <div className='input-container'>
         <Input
+          className={'title-input'}
           setRecipeTitle={setRecipeTitle}
           Placeholder={'Insert recipe title'}
           Value={title}

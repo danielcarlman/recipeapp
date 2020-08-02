@@ -1,8 +1,24 @@
-.field {
+.input-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: var(--input-width);
+}
+
+.field, .title-input, .ingredient-input {
   text-align: center;
   width: var(--input-width);
   height: 5rem;
-  margin: 2rem;
   border-radius: 1rem;
   border: 1px solid;
   background-color: rgba(255, 255, 255, 0.1);
@@ -13,9 +29,16 @@
   color: white;
 }
 
-.field:hover {
+.field:hover, .title-input:hover, .ingredient-input:hover {
   background-color: rgba(255, 255, 255, 0.45);
   -webkit-box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.05);
   box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.05);
+}
+
+.ingredient-input {
+  font-size: var(--smallest-font-size);
+  width: var(--ingredient-input-width);
+  height: var(--ingredient-input-height);
+  margin: 1rem 1rem;
 }
 /*# sourceMappingURL=style.css.map */

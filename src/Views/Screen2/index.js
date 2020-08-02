@@ -5,6 +5,7 @@ import { Actions } from '../../redux/reducers/Recipes';
 import { useSelector, useDispatch } from 'react-redux';
 import Input from '../../Components/Input';
 import Button from '../../Components/Button';
+import DropDownMenu from '../../Components/DropDownMenu';
 import { Link } from 'react-router-dom';
 
 function Screen2() {
@@ -21,12 +22,6 @@ function Screen2() {
 
   return (
     <div className='screen2-container'>
-      <h2>Add ingredients for you recipe :</h2>
-      {/* REDUX STORE */}
-      <h2>Ingredients: {JSON.stringify(ingredients)}</h2>
-      {/* ONCHANGE */}
-      <h2>onChange: {JSON.stringify(ingredientTitle)}</h2>
-
       <div className='arrows-container'>
         <Link to='/'>
           <Button className={'arrow-button'} Text={'<'} />
@@ -41,19 +36,31 @@ function Screen2() {
         </Link>
       </div>
 
+      <div className='instructions'>
+        <h2>Add ingredients for you recipe :</h2>
+      </div>
+
       <div className='input-container'>
         <Input
+          className={'ingredient-input'}
           setRecipeTitle={setIngredientTitle}
           Placeholder={'Type Ingredient Name'}
         />
+
+        <DropDownMenu />
+
+        <Button
+          className='add-button'
+          Text={'Add'}
+          Disabled={!ingredientTitle.length}
+          onClick={saveIngredients}
+        ></Button>
       </div>
 
-      <Button
-        className='ingredients-button'
-        Text={'Add Ingredients'}
-        Disabled={!ingredientTitle.length}
-        onClick={saveIngredients}
-      ></Button>
+      {/* REDUX STORE */}
+      <h3>Ingredients: {JSON.stringify(ingredients)}</h3>
+      {/* ONCHANGE */}
+      <h3>onChange: {JSON.stringify(ingredientTitle)}</h3>
     </div>
   );
 }

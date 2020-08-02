@@ -3,12 +3,15 @@
   --title-font-size: 5rem;
   --title-flex-position: center;
   --instruction-font-size: 3rem;
-  --instruction-flex-position: center;
+  --instruction-flex-position: flex-start;
   --input-width: 75vw;
+  --ingredient-input-width: 50vw;
+  --ingredient-input-height: 3rem;
   --button-width: 20rem;
   --button-font-size: 2rem;
   --button-arrow-width: 5rem;
   --small-font-size: 2rem;
+  --smallest-font-size: 1.2rem;
 }
 
 /* Tablet Screens CSS Variables */
@@ -17,12 +20,15 @@
     --title-font-size: 3.2rem;
     --title-flex-position: center;
     --instruction-font-size: 2.1rem;
-    --instruction-flex-position: center;
+    --instruction-flex-position: flex-start;
     --input-width: 75vw;
+    --ingredient-input-width: 50vw;
+    --ingredient-input-height: 3rem;
     --button-width: 20rem;
     --button-font-size: 1.5rem;
     --button-arrow-width: 4rem;
     --small-font-size: 2rem;
+    --smallest-font-size: 1.2rem;
   }
 }
 
@@ -34,10 +40,13 @@
     --instruction-font-size: 1.5rem;
     --instruction-flex-position: flex-start;
     --input-width: 75vw;
+    --ingredient-input-width: 50vw;
+    --ingredient-input-height: 3rem;
     --button-width: 20rem;
     --button-font-size: 1rem;
     --button-arrow-width: 3rem;
     --small-font-size: 1rem;
+    --smallest-font-size: 1rem;
   }
 }
 
@@ -71,37 +80,12 @@ h2 {
   font-size: var(--instruction-font-size);
 }
 
+h3 {
+  font-size: 1.2rem;
+}
+
 a {
   color: #ffffff;
   text-decoration: none;
-}
-
-.input-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.arrows-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: var(--input-width);
-  margin-top: 2rem;
-  margin-bottom: 1rem;
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,6 +1,7 @@
-.button, .arrow-button, .save-button, .ingredients-button {
+.button, .arrow-button, .add-button, .save-button {
   font-size: var(--button-font-size);
   width: var(--button-width);
+  margin: 1rem 1rem;
   padding: 1rem;
   -webkit-box-shadow: inset 0px 0px 2.5rem -0.4rem #bbdaf7;
           box-shadow: inset 0px 0px 2.5rem -0.4rem #bbdaf7;
@@ -18,35 +19,52 @@
   padding: 0.6rem 1.3rem;
   padding-right: 1.3rem;
   text-decoration: none;
-  text-shadow: 0 0.3rem 0 #528ecc;
+  text-shadow: 0 0.2rem 0 #528ecc;
 }
 
-.button:hover:enabled, .arrow-button:hover:enabled, .save-button:hover:enabled, .ingredients-button:hover:enabled {
+.button:hover:enabled, .arrow-button:hover:enabled, .add-button:hover:enabled, .save-button:hover:enabled {
   -webkit-filter: brightness(115%);
           filter: brightness(115%);
 }
 
-.button:active, .arrow-button:active, .save-button:active, .ingredients-button:active {
+.button:active, .arrow-button:active, .add-button:active, .save-button:active {
   position: relative;
   top: 1px;
 }
 
-.button:disabled, .arrow-button:disabled, .save-button:disabled, .ingredients-button:disabled {
+.button:disabled, .arrow-button:disabled, .add-button:disabled, .save-button:disabled {
   -webkit-filter: brightness(50%);
           filter: brightness(50%);
 }
 
-.arrow-button {
+.arrows-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: var(--input-width);
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.arrow-button, .add-button {
   width: 5rem;
   font-size: var(--small-font-size);
 }
 
-.save-button {
-  width: 20rem;
-  font-size: var(--small-font-size);
+.add-button {
+  height: 3rem;
+  margin: 0 1rem;
+  font-size: var(--smallest-font-size);
 }
 
-.ingredients-button {
+.save-button {
   width: 20rem;
   font-size: var(--small-font-size);
 }

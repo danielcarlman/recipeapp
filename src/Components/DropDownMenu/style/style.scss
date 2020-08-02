@@ -1,0 +1,26 @@
+select {
+  text-align-last: center;
+  cursor: pointer;
+
+  &:hover {
+    filter: brightness(115%);
+  }
+
+  option {
+    background: #79bbff;
+  }
+}
+
+.dropdown-item {
+  color: white;
+  width: 5rem;
+  height: 3rem;
+  border-radius: 1.5rem;
+  box-shadow: inset 0px 0px 2.5rem -0.4rem #bbdaf7;
+  background: linear-gradient(to bottom, #79bbff 5%, #378de5 100%);
+  background-color: #79bbff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+  text-shadow: 0 0.2rem 0 #528ecc;
+}

@@ -1,6 +1,7 @@
 .button {
   font-size: var(--button-font-size);
   width: var(--button-width);
+  margin: 1rem 1rem;
   padding: 1rem;
   box-shadow: inset 0px 0px 2.5rem -0.4rem #bbdaf7;
   background: linear-gradient(to bottom, #79bbff 5%, #378de5 100%);
@@ -16,7 +17,7 @@
   padding: 0.6rem 1.3rem;
   padding-right: 1.3rem;
   text-decoration: none;
-  text-shadow: 0 0.3rem 0 #528ecc;
+  text-shadow: 0 0.2rem 0 #528ecc;
 
   &:hover:enabled {
     filter: brightness(115%);
@@ -32,19 +33,29 @@
   }
 }
 
+.arrows-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: var(--input-width);
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
 .arrow-button {
   @extend .button;
   width: 5rem;
   font-size: var(--small-font-size);
 }
 
-.save-button {
-  @extend .button;
-  width: 20rem;
-  font-size: var(--small-font-size);
+.add-button {
+  @extend .arrow-button;
+  height: 3rem;
+  margin: 0 1rem;
+  font-size: var(--smallest-font-size);
 }
 
-.ingredients-button {
+.save-button {
   @extend .button;
   width: 20rem;
   font-size: var(--small-font-size);
