@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 
 function Screen1() {
   const { title } = useSelector((state) => state.Recipes);
-  const [recipeTitle, setRecipeTitle] = useState('');
+  const [recipeTitle, setRecipeTitle] = useState(title);
   const dispatch = useDispatch();
   function saveTitle() {
     dispatch(Actions.setTitle(recipeTitle));
