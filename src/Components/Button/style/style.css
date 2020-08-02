@@ -1,0 +1,53 @@
+.button, .arrow-button, .save-button, .ingredients-button {
+  font-size: var(--button-font-size);
+  width: var(--button-width);
+  padding: 1rem;
+  -webkit-box-shadow: inset 0px 0px 2.5rem -0.4rem #bbdaf7;
+          box-shadow: inset 0px 0px 2.5rem -0.4rem #bbdaf7;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #79bbff), to(#378de5));
+  background: linear-gradient(to bottom, #79bbff 5%, #378de5 100%);
+  background-color: #79bbff;
+  border-radius: 3rem;
+  border: none;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 0.6rem 1.3rem;
+  padding-right: 1.3rem;
+  text-decoration: none;
+  text-shadow: 0 0.3rem 0 #528ecc;
+}
+
+.button:hover:enabled, .arrow-button:hover:enabled, .save-button:hover:enabled, .ingredients-button:hover:enabled {
+  -webkit-filter: brightness(115%);
+          filter: brightness(115%);
+}
+
+.button:active, .arrow-button:active, .save-button:active, .ingredients-button:active {
+  position: relative;
+  top: 1px;
+}
+
+.button:disabled, .arrow-button:disabled, .save-button:disabled, .ingredients-button:disabled {
+  -webkit-filter: brightness(50%);
+          filter: brightness(50%);
+}
+
+.arrow-button {
+  width: 5rem;
+  font-size: var(--small-font-size);
+}
+
+.save-button {
+  width: 20rem;
+  font-size: var(--small-font-size);
+}
+
+.ingredients-button {
+  width: 20rem;
+  font-size: var(--small-font-size);
+}
+/*# sourceMappingURL=style.css.map */

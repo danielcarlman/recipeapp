@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
+// eslint-disable-next-line no-unused-vars
 import style from './style/style.css';
 import { Actions } from '../../redux/reducers/Recipes';
 import { useSelector, useDispatch } from 'react-redux';
 import Input from '../../Components/Input';
+import Button from '../../Components/Button';
 import { Link } from 'react-router-dom';
 
 function Screen1() {
@@ -22,21 +24,21 @@ function Screen1() {
       <h2>OnChange: {JSON.stringify(recipeTitle)}</h2>
 
       <div className='input-container'>
-        <Input setRecipeTitle={setRecipeTitle} />
-        <Link to='/step2'>
-          <button className='button' alt='Next' disabled={!title.length}>
-            &gt;
-          </button>
-        </Link>
+        <Input
+          setRecipeTitle={setRecipeTitle}
+          Placeholder={'Insert recipe title'}
+          Value={title}
+        />
       </div>
 
-      <button
-        className='button'
-        disabled={!recipeTitle.length}
-        onClick={saveTitle}
-      >
-        Change Title
-      </button>
+      <Link to='/step2'>
+        <Button
+          className={'save-button'}
+          Text={'Save'}
+          Disabled={!recipeTitle.length}
+          onClick={saveTitle}
+        />
+      </Link>
     </div>
   );
 }

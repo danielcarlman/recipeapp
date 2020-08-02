@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
+// eslint-disable-next-line no-unused-vars
 import style from './style/style.css';
 import { Actions } from '../../redux/reducers/Recipes';
 import { useSelector, useDispatch } from 'react-redux';
 import Input from '../../Components/Input';
+import Button from '../../Components/Button';
 import { Link } from 'react-router-dom';
 
 function Screen2() {
@@ -25,31 +27,33 @@ function Screen2() {
       {/* ONCHANGE */}
       <h2>onChange: {JSON.stringify(ingredientTitle)}</h2>
 
-      <div className='input-container'>
+      <div className='arrows-container'>
         <Link to='/'>
-          <button className='button' alt='Back'>
-            &lt;
-          </button>
+          <Button className={'arrow-button'} Text={'<'} />
         </Link>
-        <Input setRecipeTitle={setIngredientTitle} />
+
         <Link to='/step3'>
-          <button
-            className='button'
-            disabled={!ingredients.length || ingredients.includes('')}
-            alt='Next'
-          >
-            &gt;
-          </button>
+          <Button
+            className={'arrow-button'}
+            Disabled={!ingredients.length || ingredients.includes('')}
+            Text={'>'}
+          />
         </Link>
       </div>
 
-      <button
-        className='button'
-        disabled={!ingredientTitle.length}
+      <div className='input-container'>
+        <Input
+          setRecipeTitle={setIngredientTitle}
+          Placeholder={'Type Ingredient Name'}
+        />
+      </div>
+
+      <Button
+        className='ingredients-button'
+        Text={'Add Ingredients'}
+        Disabled={!ingredientTitle.length}
         onClick={saveIngredients}
-      >
-        Add Ingredients
-      </button>
+      ></Button>
     </div>
   );
 }

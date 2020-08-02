@@ -9,7 +9,7 @@
   transition: 0.1s all;
 
   font-family: 'Montserrat', sans-serif;
-  font-size: 2rem;
+  font-size: var(--small-font-size);
   color: white;
 }
 .field:hover {
