@@ -2,9 +2,9 @@
 :root {
   --title-font-size: 5rem;
   --title-flex-position: center;
-  --instruction-font-size: 3rem;
+  --instruction-font-size: 2.4rem;
   --instruction-flex-position: flex-start;
-  --input-width: 75vw;
+  --input-width: fit-content;
   --ingredient-input-width: 50vw;
   --ingredient-input-height: 3rem;
   --button-width: 20rem;
@@ -20,9 +20,9 @@
   :root {
     --title-font-size: 3.2rem;
     --title-flex-position: center;
-    --instruction-font-size: 2.1rem;
+    --instruction-font-size: 2rem;
     --instruction-flex-position: flex-start;
-    --input-width: 75vw;
+    --input-width: fit-content;
     --ingredient-input-width: 50vw;
     --ingredient-input-height: 3rem;
     --button-width: 20rem;
@@ -41,7 +41,7 @@
     --title-flex-position: center;
     --instruction-font-size: 1.5rem;
     --instruction-flex-position: flex-start;
-    --input-width: 75vw;
+    --input-width: fit-content;
     --ingredient-input-width: 50vw;
     --ingredient-input-height: 3rem;
     --button-width: 20rem;
