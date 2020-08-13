@@ -19,15 +19,15 @@ function Screen1() {
     <div className='screen1-container'>
       <h2>Insert a title for you recipe :</h2>
       {/* REDUX STORE */}
-      <h2>Title: {JSON.stringify(title)}</h2>
+      {/* <h2>Title: {JSON.stringify(title)}</h2> */}
       {/* ONCHANGE */}
-      <h2>OnChange: {JSON.stringify(recipeTitle)}</h2>
+      {/* <h2>OnChange: {JSON.stringify(recipeTitle)}</h2> */}
 
       <div className='input-container'>
         <Input
           className={'title-input'}
           setRecipeTitle={setRecipeTitle}
-          Placeholder={'Insert recipe title'}
+          Placeholder={'Example: Chocolate Cake'}
           Value={title}
         />
       </div>

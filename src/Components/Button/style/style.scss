@@ -36,16 +36,16 @@
 .arrows-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  width: var(--input-width);
-  margin-top: 2rem;
-  margin-bottom: 1rem;
+  justify-content: center;
+  width: fit-content;
+  margin: 1rem;
+  margin-bottom: 2rem;
 }
 
 .arrow-button {
   @extend .button;
   width: 5rem;
-  font-size: var(--small-font-size);
+  font-size: var(--arrow-button-font-size);
   margin: 0 1rem;
 }
 
@@ -53,11 +53,11 @@
   @extend .arrow-button;
   height: 3rem;
   margin: 0 1rem;
-  font-size: var(--smallest-font-size);
+  font-size: var(--add-button-font-size);
 }
 
 .save-button {
   @extend .button;
-  width: 20rem;
-  font-size: var(--small-font-size);
+  width: fit-content;
+  font-size: var(--button-font-size);
 }

@@ -9,6 +9,7 @@ import DropDownMenu from '../../Components/DropDownMenu';
 import { Link } from 'react-router-dom';
 
 function Screen2() {
+  const { title } = useSelector((state) => state.Recipes);
   const { ingredients } = useSelector((state) => state.Recipes);
   const [ingredientTitle, setIngredientTitle] = useState('');
   const dispatch = useDispatch();
@@ -23,16 +24,11 @@ function Screen2() {
   return (
     <div className='screen2-container'>
       <div className='arrows-container'>
+        <div className='instructions'>
+          <h2>Title: {JSON.stringify(title)} </h2>
+        </div>
         <Link to='/'>
-          <Button className={'arrow-button'} Text={'<'} />
-        </Link>
-
-        <Link to='/step3'>
-          <Button
-            className={'arrow-button'}
-            Disabled={!ingredients.length || ingredients.includes('')}
-            Text={'>'}
-          />
+          <Button className={'arrow-button'} Text={'Edit'} />
         </Link>
       </div>
 
@@ -44,7 +40,7 @@ function Screen2() {
         <Input
           className={'ingredient-input'}
           setRecipeTitle={setIngredientTitle}
-          Placeholder={'Type Ingredient Name'}
+          Placeholder={'Example: Chocolate'}
         />
 
         <DropDownMenu />

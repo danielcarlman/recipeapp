@@ -33,14 +33,14 @@
 }
 
 .title-input {
-  font-size: var(--smallest-font-size);
+  font-size: var(--input-font-size);
   width: var(--ingredient-input-width);
   height: var(--ingredient-input-height);
   margin: 1rem 1rem;
 }
 
 .ingredient-input {
-  font-size: var(--smallest-font-size);
+  font-size: var(--input-font-size);
   width: var(--ingredient-input-width);
   height: var(--ingredient-input-height);
   margin: 1rem 1rem;

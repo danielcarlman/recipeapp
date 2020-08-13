@@ -1,15 +1,16 @@
 /* Desktop Screens CSS Variables */
 :root {
   /* Font Sizes */
-  --button-font-size: 2rem;
-  --instruction-font-size: 2.4rem;
-  --small-font-size: 2rem;
-  --smallest-font-size: 1.2rem;
+  --add-button-font-size: 1.2rem;
+  --arrow-button-font-size: 1rem;
+  --button-font-size: 1.5rem;
+  --instruction-font-size: 2rem;
+  --input-font-size: 2.4rem;
   --title-font-size: 5rem;
 
   /* Positioning */
   --instruction-flex-position: flex-start;
-  --title-flex-position: center;
+  --title-flex-position: flex-end;
 
   /* Element Sizes */
   --button-arrow-width: 5rem;
@@ -24,15 +25,15 @@
 @media (max-width: 900px) {
   :root {
     /* Font Sizes */
+    --arrow-button-font-size: 1rem;
     --button-font-size: 1.5rem;
     --instruction-font-size: 2rem;
-    --small-font-size: 2rem;
-    --smallest-font-size: 1.2rem;
+    --input-font-size: 1.2rem;
     --title-font-size: 3.2rem;
 
     /* Positioning */
     --instruction-flex-position: flex-start;
-    --title-flex-position: center;
+    --title-flex-position: flex-end;
 
     /* Element Sizes */
     --button-arrow-width: 4rem;
@@ -48,15 +49,15 @@
 @media (max-width: 600px) {
   :root {
     /* Font Sizes */
+    --arrow-button-font-size: 1rem;
     --button-font-size: 1rem;
+    --input-font-size: 1rem;
     --instruction-font-size: 1.5rem;
-    --small-font-size: 1rem;
-    --smallest-font-size: 1rem;
     --title-font-size: 2.5rem;
 
     /* Positioning */
-    --title-flex-position: center;
     --instruction-flex-position: flex-start;
+    --title-flex-position: flex-end;
 
     /* Element Sizes */
     --input-width: fit-content;
