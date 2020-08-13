@@ -37,7 +37,7 @@
           filter: brightness(50%);
 }
 
-.arrows-container {
+.title-edit-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

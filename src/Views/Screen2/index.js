@@ -13,6 +13,7 @@ function Screen2() {
   const { ingredients } = useSelector((state) => state.Recipes);
   const [ingredientTitle, setIngredientTitle] = useState('');
   const dispatch = useDispatch();
+
   function saveIngredients() {
     if (!ingredientTitle.length) {
       return null;
@@ -21,9 +22,19 @@ function Screen2() {
     }
   }
 
+  function renderIngredients() {
+    return ingredients.map((ingredient) => (
+      <Input
+        className={'ingredient-input'}
+        setRecipeTitle={setIngredientTitle}
+        Value={ingredient}
+      />
+    ));
+  }
+
   return (
     <div className='screen2-container'>
-      <div className='arrows-container'>
+      <div className='title-edit-container'>
         <div className='instructions'>
           <h2>Title: {JSON.stringify(title)} </h2>
         </div>
@@ -52,6 +63,8 @@ function Screen2() {
           onClick={saveIngredients}
         ></Button>
       </div>
+
+      <div className='ingredients-list'>{renderIngredients()}</div>
 
       {/* REDUX STORE */}
       <h3>Ingredients: {JSON.stringify(ingredients)}</h3>

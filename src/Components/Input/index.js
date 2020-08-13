@@ -13,7 +13,7 @@ function Field({ setRecipeTitle, className, Placeholder, Value }) {
         className={className}
         onChange={updateValue}
         placeholder={Placeholder}
-        defaultValue={Value}
+        Value={Value}
       />
     </form>
   );
