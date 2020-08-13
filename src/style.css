@@ -1,55 +1,65 @@
 /* Desktop Screens CSS Variables */
 :root {
-  --title-font-size: 5rem;
-  --title-flex-position: center;
-  --instruction-font-size: 2.4rem;
-  --instruction-flex-position: flex-start;
-  --input-width: fit-content;
-  --ingredient-input-width: 50vw;
-  --ingredient-input-height: 3rem;
-  --button-width: 20rem;
+  /* Font Sizes */
   --button-font-size: 2rem;
-  --button-arrow-width: 5rem;
+  --instruction-font-size: 2.4rem;
   --small-font-size: 2rem;
   --smallest-font-size: 1.2rem;
+  --title-font-size: 5rem;
+  /* Positioning */
+  --instruction-flex-position: flex-start;
+  --title-flex-position: center;
+  /* Element Sizes */
+  --button-arrow-width: 5rem;
+  --button-width: 20rem;
+  --ingredient-input-height: 5rem;
+  --ingredient-input-width: 50vw;
+  --input-width: 50vw;
 }
 
 /* Tablet Screens CSS Variables */
 @media (max-width: 900px) {
   :root {
-    --title-font-size: 3.2rem;
-    --title-flex-position: center;
-    --instruction-font-size: 2rem;
-    --instruction-flex-position: flex-start;
-    --input-width: fit-content;
-    --ingredient-input-width: 50vw;
-    --ingredient-input-height: 3rem;
-    --button-width: 20rem;
+    /* Font Sizes */
     --button-font-size: 1.5rem;
-    --button-arrow-width: 4rem;
+    --instruction-font-size: 2rem;
     --small-font-size: 2rem;
     --smallest-font-size: 1.2rem;
+    --title-font-size: 3.2rem;
+    /* Positioning */
+    --instruction-flex-position: flex-start;
+    --title-flex-position: center;
+    /* Element Sizes */
+    --button-arrow-width: 4rem;
+    --button-width: 20rem;
+    --ingredient-input-width: 50vw;
+    --ingredient-input-height: 3rem;
+    --input-width: 50vw;
   }
 }
 
 /* Mobile Screens CSS Variables */
 @media (max-width: 600px) {
   :root {
-    --title-font-size: 2.5rem;
-    --title-flex-position: center;
+    /* Font Sizes */
+    --button-font-size: 1rem;
     --instruction-font-size: 1.5rem;
+    --small-font-size: 1rem;
+    --smallest-font-size: 1rem;
+    --title-font-size: 2.5rem;
+    /* Positioning */
+    --title-flex-position: center;
     --instruction-flex-position: flex-start;
+    /* Element Sizes */
     --input-width: fit-content;
     --ingredient-input-width: 50vw;
     --ingredient-input-height: 3rem;
     --button-width: 20rem;
-    --button-font-size: 1rem;
     --button-arrow-width: 3rem;
-    --small-font-size: 1rem;
-    --smallest-font-size: 1rem;
   }
 }
 
+/* Global CSS Properties */
 body {
   margin: 0;
   padding: 0;
