@@ -14,20 +14,31 @@ function Screen2() {
   const [ingredientTitle, setIngredientTitle] = useState('');
   const dispatch = useDispatch();
 
+  function updateIngredient(index, value) {
+    dispatch(Actions.updateIngredient(index, value));
+  }
+
+  function addIngredient(value) {
+    dispatch(Actions.addIngredients(value));
+  }
+
   function saveIngredients() {
     if (!ingredientTitle.length) {
       return null;
     } else {
-      dispatch(Actions.addIngredients(ingredientTitle));
+      addIngredient(ingredientTitle);
     }
   }
 
   function renderIngredients() {
-    return ingredients.map((ingredient) => (
+    return ingredients.map((ingredient, index) => (
       <Input
         className={'ingredient-input'}
         setRecipeTitle={setIngredientTitle}
-        Value={ingredient}
+        value={ingredient}
+        onChange={(value) => {
+          updateIngredient(index, value);
+        }}
       />
     ));
   }
@@ -50,8 +61,11 @@ function Screen2() {
       <div className='input-container'>
         <Input
           className={'ingredient-input'}
-          setRecipeTitle={setIngredientTitle}
-          Placeholder={'Example: Chocolate'}
+          placeholder={'Example: Chocolate'}
+          value={ingredientTitle}
+          onChange={(value) => {
+            setIngredientTitle(value);
+          }}
         />
 
         <DropDownMenu />

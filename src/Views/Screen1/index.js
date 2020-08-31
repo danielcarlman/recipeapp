@@ -9,10 +9,10 @@ import { Link } from 'react-router-dom';
 
 function Screen1() {
   const { title } = useSelector((state) => state.Recipes);
-  const [recipeTitle, setRecipeTitle] = useState(title);
   const dispatch = useDispatch();
-  function saveTitle() {
-    dispatch(Actions.setTitle(recipeTitle));
+
+  function setTitle(title) {
+    dispatch(Actions.setTitle(title));
   }
 
   return (
@@ -22,24 +22,32 @@ function Screen1() {
       {/* <h2>Title: {JSON.stringify(title)}</h2> */}
       {/* ONCHANGE */}
       {/* <h2>OnChange: {JSON.stringify(recipeTitle)}</h2> */}
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+          // setTitle();
+        }}
+      >
+        <div className='input-container'>
+          <Input
+            className={'title-input'}
+            onChange={(value) => {
+              setTitle(value);
+            }}
+            placeholder={'Example: Chocolate Cake'}
+            value={title}
+          />
+        </div>
 
-      <div className='input-container'>
-        <Input
-          className={'title-input'}
-          setRecipeTitle={setRecipeTitle}
-          Placeholder={'Example: Chocolate Cake'}
-          Value={title}
-        />
-      </div>
-
-      <Link to='/step2'>
-        <Button
-          className={'save-button'}
-          Text={'Save'}
-          Disabled={!recipeTitle.length}
-          onClick={saveTitle}
-        />
-      </Link>
+        <Link to='/step2'>
+          <Button
+            type='submit'
+            className={'save-button'}
+            Text={'Save'}
+            Disabled={!title.length}
+          />
+        </Link>
+      </form>
     </div>
   );
 }
