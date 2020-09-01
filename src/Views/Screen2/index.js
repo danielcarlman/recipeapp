@@ -58,25 +58,36 @@ function Screen2() {
         <h2>Add ingredients for you recipe :</h2>
       </div>
 
-      <div className='input-container'>
-        <Input
-          className={'ingredient-input'}
-          placeholder={'Example: Chocolate'}
-          value={ingredientTitle}
-          onChange={(value) => {
-            setIngredientTitle(value);
-          }}
-        />
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+          // setTitle();
+        }}
+      >
+        <div className='input-container'>
+          <Input
+            className={'ingredient-input'}
+            placeholder={'Example: Chocolate'}
+            value={ingredientTitle}
+            onChange={(value) => {
+              setIngredientTitle(value);
+            }}
+          />
 
-        <DropDownMenu />
+          <DropDownMenu />
 
-        <Button
-          className='add-button'
-          Text={'Add'}
-          Disabled={!ingredientTitle.length}
-          onClick={saveIngredients}
-        ></Button>
-      </div>
+          <Button
+            type='submit'
+            className='add-button'
+            Text={'Add'}
+            Disabled={!ingredientTitle.length}
+            onClick={() => {
+              saveIngredients();
+              setIngredientTitle('');
+            }}
+          ></Button>
+        </div>
+      </form>
 
       <div className='ingredients-list'>{renderIngredients()}</div>
 
