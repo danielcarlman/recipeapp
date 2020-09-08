@@ -10,7 +10,7 @@ function Screen1() {
   const dispatch = useDispatch();
   const { title, ingredients } = useSelector((state) => state.Recipes);
   const [ingredientTitle, setIngredientTitle] = useState('');
-  const [screen, changeScreen] = useState(false);
+  const [screen, toggleScreen] = useState(false);
 
   function setTitle(title) {
     dispatch(Actions.setTitle(title));
@@ -95,7 +95,7 @@ function Screen1() {
             Text={'Save'}
             Disabled={!title.length}
             onClick={() => {
-              changeScreen(!screen);
+              toggleScreen(!screen);
             }}
           />
         </form>
@@ -115,7 +115,7 @@ function Screen1() {
             className={'arrow-button'}
             Text={'Edit'}
             onClick={() => {
-              changeScreen(!screen);
+              toggleScreen(!screen);
             }}
           />
         </div>
