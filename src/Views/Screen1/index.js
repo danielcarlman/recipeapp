@@ -51,7 +51,7 @@ function Screen1() {
             updateIngredient(index, value);
           }}
         />
-        ,
+
         <Button
           type='submit'
           className='add-button'
