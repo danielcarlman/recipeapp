@@ -55,11 +55,12 @@ function Screen1() {
         <Button
           type='submit'
           className='add-button'
-          Text={'Delete'}
           onClick={() => {
             deleteIngredient(index);
           }}
-        ></Button>
+        >
+          Delete
+        </Button>
       </form>
     ));
   }
@@ -93,12 +94,13 @@ function Screen1() {
           <Button
             type='submit'
             className={'save-button'}
-            Text={'Save'}
             Disabled={!title.length}
             onClick={() => {
               changeScreen('ingredientsScreen');
             }}
-          />
+          >
+            Save
+          </Button>
         </form>
       </div>
     );
@@ -115,11 +117,12 @@ function Screen1() {
 
           <Button
             className={'edit-button'}
-            Text={'Edit'}
             onClick={() => {
               changeScreen('titleScreen');
             }}
-          />
+          >
+            Edit{' '}
+          </Button>
         </div>
 
         <div className='instructions'>
@@ -147,13 +150,14 @@ function Screen1() {
             <Button
               type='submit'
               className='add-button'
-              Text={'Add'}
               Disabled={!ingredientTitle.length}
               onClick={() => {
                 saveIngredients();
                 setIngredientTitle('');
               }}
-            ></Button>
+            >
+              Add
+            </Button>
           </div>
         </form>
 
