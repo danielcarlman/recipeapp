@@ -10,7 +10,7 @@ function Screen1() {
   const dispatch = useDispatch();
   const { title, ingredients } = useSelector((state) => state.Recipes);
   const [ingredientTitle, setIngredientTitle] = useState('');
-  const [screen, toggleScreen] = useState(false);
+  const [screen, changeScreen] = useState('titleScreen');
 
   function setTitle(title) {
     dispatch(Actions.setTitle(title));
@@ -65,7 +65,7 @@ function Screen1() {
   }
 
   // Renders Title Screen
-  if (!screen) {
+  if (screen === 'titleScreen') {
     return (
       <div className='screen1-container'>
         <h2>Insert a title for you recipe :</h2>
@@ -96,7 +96,7 @@ function Screen1() {
             Text={'Save'}
             Disabled={!title.length}
             onClick={() => {
-              toggleScreen(!screen);
+              changeScreen('ingredientsScreen');
             }}
           />
         </form>
@@ -105,7 +105,7 @@ function Screen1() {
   }
 
   // Renders Ingredients Screen
-  if (screen) {
+  if (screen === 'ingredientsScreen') {
     return (
       <div className='screen1-container'>
         <div className='title-edit-container'>
@@ -117,7 +117,7 @@ function Screen1() {
             className={'edit-button'}
             Text={'Edit'}
             onClick={() => {
-              toggleScreen(!screen);
+              changeScreen('titleScreen');
             }}
           />
         </div>
