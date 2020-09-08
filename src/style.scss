@@ -106,3 +106,18 @@ a {
   color: #ffffff;
   text-decoration: none;
 }
+
+.screen1-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: var(--instruction-flex-position);
+  align-items: center;
+  background-color: #30434f;
+  max-width: 100%;
+  height: 60vh;
+}
+
+.ingredients-list {
+  display: flex;
+  flex-direction: column;
+}
