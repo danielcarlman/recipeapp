@@ -22,6 +22,10 @@ function Screen2() {
     dispatch(Actions.addIngredients(value));
   }
 
+  function deleteIngredient(index) {
+    dispatch(Actions.deleteIngredients(index));
+  }
+
   function saveIngredients() {
     if (!ingredientTitle.length) {
       return null;
@@ -32,14 +36,29 @@ function Screen2() {
 
   function renderIngredients() {
     return ingredients.map((ingredient, index) => (
-      <Input
-        className={'ingredient-input'}
-        setRecipeTitle={setIngredientTitle}
-        value={ingredient}
-        onChange={(value) => {
-          updateIngredient(index, value);
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
         }}
-      />
+      >
+        <Input
+          className={'ingredient-input'}
+          setRecipeTitle={setIngredientTitle}
+          value={ingredient}
+          onChange={(value) => {
+            updateIngredient(index, value);
+          }}
+        />
+        ,
+        <Button
+          type='submit'
+          className='add-button'
+          Text={'Delete'}
+          onClick={() => {
+            deleteIngredient(index);
+          }}
+        ></Button>
+      </form>
     ));
   }
 
