@@ -64,6 +64,7 @@ function Screen1() {
     ));
   }
 
+  // Renders Title Screen
   if (!screen) {
     return (
       <div className='screen1-container'>
@@ -103,6 +104,7 @@ function Screen1() {
     );
   }
 
+  // Renders Ingredients Screen
   if (screen) {
     return (
       <div className='screen1-container'>
