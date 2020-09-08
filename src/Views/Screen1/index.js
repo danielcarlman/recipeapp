@@ -114,7 +114,7 @@ function Screen1() {
           </div>
 
           <Button
-            className={'arrow-button'}
+            className={'edit-button'}
             Text={'Edit'}
             onClick={() => {
               toggleScreen(!screen);

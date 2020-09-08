@@ -42,15 +42,15 @@
   margin-bottom: 2rem;
 }
 
-.arrow-button {
+.edit-button {
   @extend .button;
   width: 5rem;
-  font-size: var(--arrow-button-font-size);
+  font-size: var(--edit-button-font-size);
   margin: 0 1rem;
 }
 
 .add-button {
-  @extend .arrow-button;
+  @extend .edit-button;
   height: 3rem;
   margin: 0 1rem;
   font-size: var(--add-button-font-size);

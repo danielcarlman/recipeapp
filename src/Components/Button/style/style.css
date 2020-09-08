@@ -1,4 +1,4 @@
-.button, .arrow-button, .add-button, .save-button {
+.button, .edit-button, .add-button, .save-button {
   font-size: var(--button-font-size);
   width: var(--button-width);
   margin: 1rem 1rem;
@@ -22,17 +22,17 @@
   text-shadow: 0 0.2rem 0 #528ecc;
 }
 
-.button:hover:enabled, .arrow-button:hover:enabled, .add-button:hover:enabled, .save-button:hover:enabled {
+.button:hover:enabled, .edit-button:hover:enabled, .add-button:hover:enabled, .save-button:hover:enabled {
   -webkit-filter: brightness(115%);
           filter: brightness(115%);
 }
 
-.button:active, .arrow-button:active, .add-button:active, .save-button:active {
+.button:active, .edit-button:active, .add-button:active, .save-button:active {
   position: relative;
   top: 1px;
 }
 
-.button:disabled, .arrow-button:disabled, .add-button:disabled, .save-button:disabled {
+.button:disabled, .edit-button:disabled, .add-button:disabled, .save-button:disabled {
   -webkit-filter: brightness(50%);
           filter: brightness(50%);
 }
@@ -55,9 +55,9 @@
   margin-bottom: 2rem;
 }
 
-.arrow-button, .add-button {
+.edit-button, .add-button {
   width: 5rem;
-  font-size: var(--arrow-button-font-size);
+  font-size: var(--edit-button-font-size);
   margin: 0 1rem;
 }
 

@@ -2,10 +2,10 @@
 :root {
   /* Font Sizes */
   --add-button-font-size: 1.2rem;
-  --arrow-button-font-size: 1rem;
+  --edit-button-font-size: 1rem;
   --button-font-size: 1.5rem;
-  --instruction-font-size: 2rem;
   --input-font-size: 2.4rem;
+  --instruction-font-size: 2rem;
   --title-font-size: 5rem;
 
   /* Positioning */
@@ -18,6 +18,10 @@
   --ingredient-input-height: 5rem;
   --ingredient-input-width: 50vw;
   --input-width: 50vw;
+  --title-height: 40vh;
+
+  /* Margins, Paddings, etc. */
+  --margin-top-container: 2rem;
 }
 
 /* Tablet Screens CSS Variables */
@@ -25,10 +29,9 @@
 @media (max-width: 900px) {
   :root {
     /* Font Sizes */
-    --arrow-button-font-size: 1rem;
     --button-font-size: 1.5rem;
-    --instruction-font-size: 2rem;
     --input-font-size: 1.2rem;
+    --instruction-font-size: 2rem;
     --title-font-size: 3.2rem;
 
     /* Positioning */
@@ -41,6 +44,7 @@
     --ingredient-input-width: 50vw;
     --ingredient-input-height: 3rem;
     --input-width: 50vw;
+    --title-height: 40vh;
   }
 }
 
@@ -49,7 +53,7 @@
 @media (max-width: 600px) {
   :root {
     /* Font Sizes */
-    --arrow-button-font-size: 1rem;
+    --edit-button-font-size: 1rem;
     --button-font-size: 1rem;
     --input-font-size: 1rem;
     --instruction-font-size: 1.5rem;
@@ -57,14 +61,18 @@
 
     /* Positioning */
     --instruction-flex-position: flex-start;
-    --title-flex-position: flex-end;
+    --title-flex-position: flex-start;
 
     /* Element Sizes */
-    --input-width: fit-content;
-    --ingredient-input-width: 50vw;
-    --ingredient-input-height: 3rem;
     --button-width: 20rem;
     --button-arrow-width: 3rem;
+    --ingredient-input-width: 50vw;
+    --ingredient-input-height: 3rem;
+    --input-width: fit-content;
+    --title-height: 20vh;
+
+    /* Margins, Paddings, etc. */
+    --margin-top-container: 1rem;
   }
 }
 
@@ -115,6 +123,7 @@ a {
   background-color: #30434f;
   max-width: 100%;
   height: 60vh;
+  margin-top: var(--margin-top-container);
 }
 
 .ingredients-list {
