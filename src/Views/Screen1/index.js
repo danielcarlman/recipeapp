@@ -70,9 +70,9 @@ function Screen1() {
       <div className='screen1-container'>
         <h2>Insert a title for you recipe :</h2>
         {/* REDUX STORE */}
-        {/* <h2>Title: {JSON.stringify(title)}</h2> */}
+        {/* <p>Title: {JSON.stringify(title)}</p> */}
         {/* ONCHANGE */}
-        {/* <h2>OnChange: {JSON.stringify(recipeTitle)}</h2> */}
+        {/* <p>OnChange: {JSON.stringify(recipeTitle)}</p> */}
         <form
           onSubmit={(e) => {
             e.preventDefault();
@@ -110,7 +110,7 @@ function Screen1() {
       <div className='screen1-container'>
         <div className='title-edit-container'>
           <div className='instructions'>
-            <h2>Title: {JSON.stringify(title)} </h2>
+            <h2>Title: {JSON.stringify(title).replaceAll('"', '')}</h2>
           </div>
 
           <Button
@@ -160,9 +160,9 @@ function Screen1() {
         <div className='ingredients-list'>{renderIngredients()}</div>
 
         {/* REDUX STORE */}
-        <h3>Ingredients: {JSON.stringify(ingredients)}</h3>
+        <p>Ingredients: {JSON.stringify(ingredients)}</p>
         {/* ONCHANGE */}
-        <h3>onChange: {JSON.stringify(ingredientTitle)}</h3>
+        <p>onChange: {JSON.stringify(ingredientTitle)}</p>
       </div>
     );
   }
