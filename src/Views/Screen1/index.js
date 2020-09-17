@@ -3,7 +3,6 @@ import { Actions } from '../../redux/reducers/Recipes';
 import { useSelector, useDispatch } from 'react-redux';
 import Input from '../../Components/Input';
 import Button from '../../Components/Button';
-import DropDownMenu from '../../Components/DropDownMenu';
 // import { Link } from 'react-router-dom';
 
 function Screen1() {
@@ -151,9 +150,7 @@ function Screen1() {
       <div className='screen1-container'>
         <div className='title-edit-container'>
           <div className='instructions'>
-            <h2 className='title-text'>
-              Title: <br /> {title}
-            </h2>
+            <h2 className='title-text'>Title: {title}</h2>
           </div>
 
           <Button
@@ -203,9 +200,9 @@ function Screen1() {
         <div className='ingredients-list'>{renderIngredients()}</div>
 
         {/* REDUX STORE */}
-        <p>Ingredients: {JSON.stringify(ingredients)}</p>
+        {/* <p>Ingredients: {JSON.stringify(ingredients)}</p> */}
         {/* ONCHANGE */}
-        <p>onChange: {JSON.stringify(ingredientTitle)}</p>
+        {/* <p>onChange: {JSON.stringify(ingredientTitle)}</p> */}
       </div>
     );
   }

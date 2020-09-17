@@ -42,10 +42,11 @@
 @media (max-width: 768px) {
   :root {
     /* Font Sizes */
-    --edit-button-font-size: 1rem;
+    --add-button-font-size: 1rem;
+    --edit-button-font-size: 0.7rem;
     --button-font-size: 1rem;
     --input-font-size: 1rem;
-    --instruction-font-size: 1.5rem;
+    --instruction-font-size: 1rem;
     --title-font-size: 2.5rem;
     /* Element Sizes */
     --button-width: 20rem;
@@ -55,8 +56,6 @@
     --input-width: fit-content;
     --screen-height: 50vh;
     --title-height: 15vh;
-    /* Margins, Paddings, etc. */
-    --padding-top-container: 1rem;
   }
 }
 
@@ -159,6 +158,12 @@ form {
   display: flex;
 }
 
+@media (max-width: 768px) {
+  .buttons {
+    margin-left: 1rem;
+  }
+}
+
 .ingredient-preview {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -166,11 +171,25 @@ form {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  min-width: 38rem;
   width: 100%;
   height: 100%;
   border-style: dotted;
   border-radius: 50px;
   padding: 2rem;
-  min-width: 15rem;
+}
+
+@media (max-width: 1024px) {
+  .ingredient-preview {
+    min-width: 23rem;
+    max-width: 23rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .ingredient-preview {
+    min-width: 15rem;
+    max-width: 15rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */
