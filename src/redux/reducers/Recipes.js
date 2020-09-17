@@ -31,7 +31,7 @@ export default function Recipes(state = INITIAL_STATE, action) {
       return { ...state, title: action.payload };
 
     case Types.ADD_INGREDIENTS:
-      return { ...state, ingredients: [...state.ingredients, action.payload] };
+      return { ...state, ingredients: [action.payload, ...state.ingredients] };
 
     case Types.DELETE_INGREDIENT:
       state.ingredients.splice(action.payload.index, 1);

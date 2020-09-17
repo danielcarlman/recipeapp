@@ -47,9 +47,8 @@
     --button-font-size: 1rem;
     --input-font-size: 1rem;
     --instruction-font-size: 1rem;
-    --title-font-size: 2.5rem;
+    --title-font-size: 1.8rem;
     /* Element Sizes */
-    --button-width: 20rem;
     --button-arrow-width: 3rem;
     --ingredient-input-width: 50vw;
     --ingredient-input-height: 3rem;
@@ -89,7 +88,6 @@ h1 {
 h2 {
   font-family: 'Montserrat', sans-serif;
   font-size: var(--instruction-font-size);
-  width: 100%;
   text-align: left;
   overflow: hidden;
 }
@@ -113,9 +111,17 @@ form {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: var(--ingredient-input-height);
-  width: var(--input-width);
+  width: 100%;
   margin: 1rem 0rem;
+}
+
+@media (max-width: 768px) {
+  form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .screen1-container {
@@ -142,14 +148,20 @@ form {
   text-align: center;
 }
 
+@media (max-width: 768px) {
+  .screen1-container .instructions {
+    margin: 1rem;
+  }
+}
+
 .ingredients-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .ingredients-list {
+    width: 100%;
+  }
 }
 
 .buttons {
@@ -171,25 +183,10 @@ form {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  min-width: 38rem;
   width: 100%;
   height: 100%;
   border-style: dotted;
   border-radius: 50px;
-  padding: 2rem;
-}
-
-@media (max-width: 1024px) {
-  .ingredient-preview {
-    min-width: 23rem;
-    max-width: 23rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .ingredient-preview {
-    min-width: 15rem;
-    max-width: 15rem;
-  }
+  padding: 1rem;
 }
 /*# sourceMappingURL=style.css.map */

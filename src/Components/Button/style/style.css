@@ -1,8 +1,6 @@
 .button, .edit-button, .add-button, .save-button {
   font-size: var(--button-font-size);
-  width: var(--button-width);
-  margin: 1rem 1rem;
-  padding: 1rem;
+  min-width: 6rem;
   -webkit-box-shadow: inset 0px 0px 2.5rem -0.4rem #bbdaf7;
           box-shadow: inset 0px 0px 2.5rem -0.4rem #bbdaf7;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #79bbff), to(#378de5));
@@ -13,11 +11,8 @@
   display: inline-block;
   cursor: pointer;
   color: #ffffff;
-  font-family: Arial;
-  font-size: 2rem;
   font-weight: bold;
   padding: 0.6rem 1.3rem;
-  padding-right: 1.3rem;
   text-decoration: none;
   text-shadow: 0 0.2rem 0 #528ecc;
 }
@@ -51,8 +46,19 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 28rem;
   margin: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .title-edit-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
 }
 
 .title-text {
@@ -61,25 +67,25 @@
 }
 
 .edit-button, .add-button {
-  width: 6rem;
-  font-size: var(--edit-button-font-size);
-  margin: 2rem 1rem;
-  height: 2.4rem;
+  font-size: 0.7rem;
+}
+
+@media (max-width: 768px) {
+  .edit-button, .add-button {
+    margin-top: 0.5rem;
+  }
 }
 
 .add-button {
-  height: 3rem;
   margin: 0 1rem;
   font-size: var(--add-button-font-size);
-  height: 2.4rem;
 }
 
 @media (max-width: 768px) {
   .add-button {
-    width: 4rem;
     margin: 0.5rem;
-    padding: 1rem;
-    font-size: var(--edit-button-font-size);
+    padding: 0.5rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -88,6 +94,5 @@
   width: -moz-fit-content;
   width: fit-content;
   font-size: var(--button-font-size);
-  height: 3rem;
 }
 /*# sourceMappingURL=style.css.map */

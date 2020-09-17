@@ -13,8 +13,10 @@
       -ms-flex-align: center;
           align-items: center;
   background-color: #30434f;
-  max-width: 100%;
-  height: var(--title-height);
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 1rem;
 }
 
 @media (max-width: 768px) {

@@ -106,7 +106,7 @@ function Screen1() {
   // Renders Title Screen
   if (screen === 'titleScreen') {
     return (
-      <div className='screen1-container'>
+      <div className='container'>
         <h2 className='instructions'>Insert a title for you recipe :</h2>
         {/* REDUX STORE */}
         {/* <p>Title: {JSON.stringify(title)}</p> */}
@@ -147,7 +147,7 @@ function Screen1() {
   // Renders Ingredients Screen
   if (screen === 'ingredientsScreen') {
     return (
-      <div className='screen1-container'>
+      <div className='container'>
         <div className='title-edit-container'>
           <div className='instructions'>
             <h2 className='title-text'>Title: {title}</h2>
