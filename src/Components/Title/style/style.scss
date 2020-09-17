@@ -1,11 +1,15 @@
 .container {
   display: flex;
   flex-direction: column;
-  justify-content: var(--title-flex-position);
+  justify-content: flex-end;
   align-items: center;
   background-color: #30434f;
   max-width: 100%;
   height: var(--title-height);
+
+  @media (max-width: 768px) {
+    justify-content: flex-start;
+  }
 }
 
 .title {

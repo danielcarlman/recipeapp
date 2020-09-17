@@ -11,6 +11,7 @@ function Screen1() {
   const { title, ingredients } = useSelector((state) => state.Recipes);
   const [ingredientTitle, setIngredientTitle] = useState('');
   const [screen, changeScreen] = useState('titleScreen');
+  const [editIndex, setEditIndex] = useState(-1);
 
   function setTitle(title) {
     dispatch(Actions.setTitle(title));
@@ -43,24 +44,62 @@ function Screen1() {
           e.preventDefault();
         }}
       >
-        <Input
-          className={'ingredient-input'}
-          setRecipeTitle={setIngredientTitle}
-          value={ingredient}
-          onChange={(value) => {
-            updateIngredient(index, value);
-          }}
-        />
+        {editIndex !== index && [
+          <div
+            className='ingredient-preview'
+            onDoubleClick={() => {
+              setEditIndex(index);
+            }}
+          >
+            <h2>{ingredient}</h2>
+          </div>,
+        ]}
 
-        <Button
-          type='submit'
-          className='add-button'
-          onClick={() => {
-            deleteIngredient(index);
-          }}
-        >
-          Delete
-        </Button>
+        {editIndex === index && (
+          <Input
+            className={'ingredient-input'}
+            setRecipeTitle={setIngredientTitle}
+            value={ingredient}
+            onChange={(value) => {
+              updateIngredient(index, value);
+            }}
+          />
+        )}
+
+        <div className='buttons'>
+          {editIndex !== index ? (
+            <Button
+              type='submit'
+              className='add-button'
+              onClick={() => {
+                setEditIndex(index);
+              }}
+            >
+              Edit
+            </Button>
+          ) : (
+            <Button
+              type='submit'
+              className='add-button'
+              onClick={() => {
+                setEditIndex(-1);
+              }}
+              Disabled={!ingredients[index].length}
+            >
+              OK
+            </Button>
+          )}
+
+          <Button
+            type='submit'
+            className='add-button'
+            onClick={() => {
+              deleteIngredient(index);
+            }}
+          >
+            X
+          </Button>
+        </div>
       </form>
     ));
   }
@@ -69,7 +108,7 @@ function Screen1() {
   if (screen === 'titleScreen') {
     return (
       <div className='screen1-container'>
-        <h2>Insert a title for you recipe :</h2>
+        <h2 className='instructions'>Insert a title for you recipe :</h2>
         {/* REDUX STORE */}
         {/* <p>Title: {JSON.stringify(title)}</p> */}
         {/* ONCHANGE */}
@@ -112,7 +151,9 @@ function Screen1() {
       <div className='screen1-container'>
         <div className='title-edit-container'>
           <div className='instructions'>
-            <h2>Title: {JSON.stringify(title).replaceAll('"', '')}</h2>
+            <h2 className='title-text'>
+              Title: <br /> {title}
+            </h2>
           </div>
 
           <Button
@@ -145,8 +186,6 @@ function Screen1() {
               }}
             />
 
-            <DropDownMenu />
-
             <Button
               type='submit'
               className='add-button'
@@ -156,7 +195,7 @@ function Screen1() {
                 setIngredientTitle('');
               }}
             >
-              Add
+              +
             </Button>
           </div>
         </form>

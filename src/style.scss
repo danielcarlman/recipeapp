@@ -4,13 +4,9 @@
   --add-button-font-size: 1.2rem;
   --edit-button-font-size: 1rem;
   --button-font-size: 1.5rem;
-  --input-font-size: 2.4rem;
+  --input-font-size: 1.8rem;
   --instruction-font-size: 2rem;
   --title-font-size: 5rem;
-
-  /* Positioning */
-  --instruction-flex-position: flex-start;
-  --title-flex-position: flex-end;
 
   /* Element Sizes */
   --button-arrow-width: 5rem;
@@ -27,17 +23,13 @@
 
 /* Tablet Screens CSS Variables */
 
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
   :root {
     /* Font Sizes */
     --button-font-size: 1.5rem;
     --input-font-size: 1.2rem;
     --instruction-font-size: 2rem;
     --title-font-size: 3.2rem;
-
-    /* Positioning */
-    --instruction-flex-position: flex-start;
-    --title-flex-position: flex-end;
 
     /* Element Sizes */
     --button-arrow-width: 4rem;
@@ -52,7 +44,7 @@
 
 /* Mobile Screens CSS Variables */
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   :root {
     /* Font Sizes */
     --edit-button-font-size: 1rem;
@@ -61,10 +53,6 @@
     --instruction-font-size: 1.5rem;
     --title-font-size: 2.5rem;
 
-    /* Positioning */
-    --instruction-flex-position: flex-start;
-    --title-flex-position: flex-start;
-
     /* Element Sizes */
     --button-width: 20rem;
     --button-arrow-width: 3rem;
@@ -72,7 +60,7 @@
     --ingredient-input-height: 3rem;
     --input-width: fit-content;
     --screen-height: 50vh;
-    --title-height: 20vh;
+    --title-height: 15vh;
 
     /* Margins, Paddings, etc. */
     --padding-top-container: 1rem;
@@ -108,6 +96,9 @@ h1 {
 h2 {
   font-family: 'Montserrat', sans-serif;
   font-size: var(--instruction-font-size);
+  width: 100%;
+  text-align: left;
+  overflow: hidden;
 }
 
 p {
@@ -119,18 +110,46 @@ a {
   text-decoration: none;
 }
 
+form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: var(--ingredient-input-height);
+  width: var(--input-width);
+  margin: 1rem 0rem;
+}
+
 .screen1-container {
   display: flex;
   flex-direction: column;
-  justify-content: var(--instruction-flex-position);
+  justify-content: flex-start;
   align-items: center;
   background-color: #30434f;
   max-width: 100%;
   height: var(--screen-height);
   padding-top: var(--padding-top-container);
+
+  .instructions {
+    text-align: center;
+  }
 }
 
 .ingredients-list {
   display: flex;
   flex-direction: column;
+}
+
+.buttons {
+  display: flex;
+}
+
+.ingredient-preview {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border-style: dotted;
+  border-radius: 50px;
+  padding: 2rem;
+  min-width: 15rem;
 }

@@ -4,12 +4,9 @@
   --add-button-font-size: 1.2rem;
   --edit-button-font-size: 1rem;
   --button-font-size: 1.5rem;
-  --input-font-size: 2.4rem;
+  --input-font-size: 1.8rem;
   --instruction-font-size: 2rem;
   --title-font-size: 5rem;
-  /* Positioning */
-  --instruction-flex-position: flex-start;
-  --title-flex-position: flex-end;
   /* Element Sizes */
   --button-arrow-width: 5rem;
   --button-width: 20rem;
@@ -23,16 +20,13 @@
 }
 
 /* Tablet Screens CSS Variables */
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
   :root {
     /* Font Sizes */
     --button-font-size: 1.5rem;
     --input-font-size: 1.2rem;
     --instruction-font-size: 2rem;
     --title-font-size: 3.2rem;
-    /* Positioning */
-    --instruction-flex-position: flex-start;
-    --title-flex-position: flex-end;
     /* Element Sizes */
     --button-arrow-width: 4rem;
     --button-width: 20rem;
@@ -45,7 +39,7 @@
 }
 
 /* Mobile Screens CSS Variables */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   :root {
     /* Font Sizes */
     --edit-button-font-size: 1rem;
@@ -53,9 +47,6 @@
     --input-font-size: 1rem;
     --instruction-font-size: 1.5rem;
     --title-font-size: 2.5rem;
-    /* Positioning */
-    --instruction-flex-position: flex-start;
-    --title-flex-position: flex-start;
     /* Element Sizes */
     --button-width: 20rem;
     --button-arrow-width: 3rem;
@@ -63,7 +54,7 @@
     --ingredient-input-height: 3rem;
     --input-width: fit-content;
     --screen-height: 50vh;
-    --title-height: 20vh;
+    --title-height: 15vh;
     /* Margins, Paddings, etc. */
     --padding-top-container: 1rem;
   }
@@ -99,6 +90,9 @@ h1 {
 h2 {
   font-family: 'Montserrat', sans-serif;
   font-size: var(--instruction-font-size);
+  width: 100%;
+  text-align: left;
+  overflow: hidden;
 }
 
 p {
@@ -110,6 +104,21 @@ a {
   text-decoration: none;
 }
 
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: var(--ingredient-input-height);
+  width: var(--input-width);
+  margin: 1rem 0rem;
+}
+
 .screen1-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -118,9 +127,9 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: var(--instruction-flex-position);
-      -ms-flex-pack: var(--instruction-flex-position);
-          justify-content: var(--instruction-flex-position);
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -128,6 +137,10 @@ a {
   max-width: 100%;
   height: var(--screen-height);
   padding-top: var(--padding-top-container);
+}
+
+.screen1-container .instructions {
+  text-align: center;
 }
 
 .ingredients-list {
@@ -138,5 +151,26 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.ingredient-preview {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+  border-style: dotted;
+  border-radius: 50px;
+  padding: 2rem;
+  min-width: 15rem;
 }
 /*# sourceMappingURL=style.css.map */

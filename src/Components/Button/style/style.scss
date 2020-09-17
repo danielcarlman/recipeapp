@@ -35,18 +35,23 @@
 
 .title-edit-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
-  width: fit-content;
-  margin: 1rem;
-  margin-bottom: 2rem;
+  align-items: center;
+  width: 28rem;
+  margin: 0.5rem;
+}
+
+.title-text {
+  text-align: center;
 }
 
 .edit-button {
   @extend .button;
   width: 6rem;
   font-size: var(--edit-button-font-size);
-  margin: 0 1rem;
+  margin: 2rem 1rem;
+  height: 2.4rem;
 }
 
 .add-button {
@@ -54,10 +59,12 @@
   height: 3rem;
   margin: 0 1rem;
   font-size: var(--add-button-font-size);
+  height: 2.4rem;
 }
 
 .save-button {
   @extend .button;
   width: fit-content;
   font-size: var(--button-font-size);
+  height: 3rem;
 }
